@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1115\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\qc\pardirnatural
+
+\f0\b\fs48 \cf0 EXERCISE 3\
+\
+\pard\pardeftab720\ql\qnatural
+
+\f1\fs32 \cf0 Ques.)
+\b0 Design a table structure for following condition: \
+a.A user can have many articles and each article will be in one category. Article must be associated with a user and a category. User can be a admin or a normal user. Article can also have one or many comments and comments and each comment will be associated with users. \
+b.Now write queries for: # manage categories, articles, comments, and users # select all articles and comments associated with that articles which is associated with user 3 in one query.\
+\
+Ans)\
+a.CREATE TABLE users(user_id INT, u_name VARCHAR(50), city VARCHAR(20));\
+\
+\pard\pardeftab720\ql\qnatural
+\cf0 CREATE TABLE categories(category_id NUMBER(10), name VARCHAR(50), PRIMARY KEY(category_id));\
+\pard\pardeftab720\ql\qnatural
+\cf0 \
+CREATE TABLE articles(a_id NUMBER(10),a_name VARCHAR(50),qty INT,category_id NUMBER(10), uid NUMBER(10),category_id NUMBER(10), FOREIGN KEY(category_id) REFERENCES categories(category_id), FOREIGN KEY(uid) REFERENCES users(user_id)); \
+\
+CREATE TABLE comments(comment_id NUMBER(10),comment_title VARCHAR(5), a_id NUMBER(10) , FOREIGN KEY(a_id) REFERENCES articles(a_id));\
+\
+MANAGE------\
+ALTER TABLE categories\
+ 		CHANGE name cat_name VARCHAR(50);\
+\
+UPDATE users\
+	SET city="Delhi" where u_name='Raj';\
+\
+ALTER TABLE articles MODIFY a_name VARCHAR(50);\
+\
+B.SELECT a.a_name,c.comment_title FROM articles a,comments c,user u \
+WHERE a.a_id-c.aid and\
+a.a_aid=u.u_id and u.uid=3;\
+\
+\
+\
+\
+\
+\
+}
