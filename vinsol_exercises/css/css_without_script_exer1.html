@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+
+
+<style type="text/css">
+
+body{
+background-color:white;
+}
+h1{
+font-size:4em;
+margin-left:15px;
+}
+div#inner{
+
+margin-left:0;
+padding:0;
+background-color:grey;
+display:none;
+
+}
+
+
+ul.main a.main
+{
+background-color:#D3D3D3;
+display:block;
+font-size:1.8em;
+font-weight:bold;
+width:140px;
+text-align:center;
+padding:2.5px;
+text-decoration:none;
+color:black;
+border:1.8px solid white;
+}
+
+
+li a:hover{background-color:grey;}
+
+ul.main>li
+{
+display:inline;
+float:left;
+}
+
+div#inner li
+{
+display:inline;
+float:left;
+list-style-type:none;
+}
+ul.sub a:link,ul.sub a:visited{
+background-color:grey;
+display:block;
+font-size:1.7em;
+font-weight:bold;
+color:white;
+width:200px;
+text-align:center;
+padding:.5px;
+text-decoration:none;
+margin-top: -5px;}
+
+.sub li{
+float:left;
+background-color:grey;
+display:none;
+list-style-type:none;}
+
+ul.sub a{background-color:grey;
+width:200px;
+padding:2px;
+border-right-style:none;
+}
+.main li#abt:hover ul.sub>li {display:inline;}
+</style>
+<title>exer1 css</title>
+
+</head>
+<body>
+
+<h1>Example of CSS-driven tabs</h1>
+<div id="header" style="background-color:lightblue;">
+<ul class="main">
+	<li><a class="main" href="">Home</a></li>
+	<li id="abt"><a class="main" href="">About</a>
+				
+		<ul class="sub" style="position: absolute; margin-left:-185px;">
+			<li><a href="">vision</a></li>
+			<li><a href="">Team</a></li>
+			<li><a href="">Culture</a></li>
+			<li><a href="">Careers</a></li>				
+			<li><a href="">History</a></li>
+			<li><a href="">Sponsership</a></li>
+		</ul>
+			
+		</li>
+	<li class="mainmenu"><a class="main" href="">News</a></li>
+	<li class="mainmenu"><a class="main" href="">Proof</a></li>
+	<li class="mainmenu"><a class="main" href="">Process</a></li>
+	<li class="mainmenu"><a class="main" href="">Expertise</a></li>
+	<li class="mainmenu"><a class="main" href="">Help</a></li>
+</ul>
+</div>
+<br style="clear:both;"/>
+<!--<div id="inner">
+		<ul>
+			<li><a href="">vision</a></li>
+			<li><a href="">Team</a></li>
+			<li><a href="">Culture</a></li>
+			<li><a href="">Careers</a></li>				
+			<li><a href="">History</a></li>
+			<li><a href="">Sponsership</a></li>
+		</ul>
+		</div>
+-->
+</body>
+</html>
