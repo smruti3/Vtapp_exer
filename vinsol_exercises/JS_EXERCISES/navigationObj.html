@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<body onload="alertNavi()">
+		
+		<div id="example"></div>
+
+			<script type="text/javascript">
+			
+			function alertNavi(){
+			var plug="";
+
+			txt = "Browser CodeName: " + navigator.appCodeName + "\n";
+			txt+= "Browser Name: " + navigator.appName + "\n";
+			txt+= "Browser Version: " + navigator.appVersion +"\n";
+			txt+= "Cookies Enabled: " + navigator.cookieEnabled +"\n";
+			txt+= "Java Enabled: " + navigator.javaEnabled() + "\n";
+			txt+= "Platform: " + navigator.platform + "\n";
+			txt+= "Language of Browser: "+ navigator.language+ "\n";
+			alert(txt);
+			
+			for(i=0;i<navigator.plugins.length;i++)
+				{
+					for(j=0;j<navigator.plugins[i].length;j++)
+					{
+						plug = plug + " , " + navigator.plugins[i][j].description ;
+					}	
+				}
+			alert("Plugins List: "+ plug);
+			
+			}
+			</script>
+
+</body>
+</html>
+

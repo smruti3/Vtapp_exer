@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html>
+	<head>
+		<script type="text/javascript">
+		function scrnColor()
+			{
+			var txt="color depth of the screen is:";
+			txt+=screen.colorDepth;
+			alert(txt);
+			}
+		function scrnHeight()
+			{
+			var txt="Total height of the screen is:";
+			txt+=screen.height;
+			alert(txt);
+			}
+		function scrnWidth()
+			{
+			var txt="Total width of the screen is:";
+			txt+=screen.width;
+			alert(txt);
+			}
+		</script>
+	</head>
+	<body>
+
+		<h3>About Your Screen:</h3>
+
+		
+		<form>
+			<input type="button" id="button1" onclick="scrnColor()"		value="ScreenColor" style="background-color:red;"/><br/>
+			<input type="button" id="button2" onclick="scrnHeight()"		value="ScreenHeight" style="background-color:yellow;" /><br/>
+			<input type="button" id="button2" onclick="scrnWidth()"		value="ScreenWidth" style="background-color:green;" />
+			
+		</form>
+
+
+	</body>
+</html>
+
